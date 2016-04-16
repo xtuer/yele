@@ -21,12 +21,12 @@
 			<div class="switch-btn">
 				<div class="icon">
 					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
+						<div class="icon-wrap icon-ribbon" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						<div class="icon-wrap icon-house hide" data-idx="0">
 							<div class="birdhouse"></div>
 							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
 						</div>
 						<%if(theme.friends && theme.friends.length != 0){%>
 						<div class="icon-wrap icon-link hide" data-idx="2">
@@ -41,13 +41,13 @@
 						</div>
 						<%}%>
 					</div>
-					
+
 				</div>
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li><%= __('menu.menu') %></li>
 						<li><%= __('menu.tags') %></li>
+						<li><%= __('menu.menu') %></li>
 						<%if(theme.friends && theme.friends.length != 0){%>
 						<li><%= __('menu.link') %></li>
 						<%}%>
@@ -61,7 +61,15 @@
 
 		<div class="switch-area">
 			<div class="switch-wrap">
+				<%if(theme.tagcloud){%>
 				<section class="switch-part switch-part1">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<%- tagcloud() %>
+					</div>
+				</section>
+				<%}%>
+
+				<section class="switch-part switch-part2">
 					<nav class="header-menu">
 						<ul>
 						<% for (var i in theme.menu){ %>
@@ -77,15 +85,7 @@
 						</div>
 					</nav>
 				</section>
-				
-				<%if(theme.tagcloud){%>
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<%- tagcloud() %>
-					</div>
-				</section>
-				<%}%>
-				
+
 				<%if(theme.friends && theme.friends.length != 0){%>
 				<section class="switch-part switch-part3">
 					<div id="js-friends">
@@ -107,5 +107,5 @@
 				<%}%>
 			</div>
 		</div>
-	</header>				
+	</header>
 </div>
