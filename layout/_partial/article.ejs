@@ -2,7 +2,8 @@
   <%if(post.noDate != "true"){%>
     <div class="article-meta">
         <% if (!index) { %>
-            <a href="javascript: void(0)" id="toc-button">目录</a>
+            <a href="javascript: void(0)" id="toc-button">列表</a>
+            <div style="display:none"><%- partial('post/date', {class_name: 'article-date', date_format: null}) %></div>
         <%}%>
 
         <% if (index) { %>
@@ -32,7 +33,7 @@
       <% } else { %>
         <% if (!index && config.toc){ %>
         <div id="toc" class="article-toc" style="display: none;">
-          <%- toc(post.content) %>
+          <%- toc(post.content, {list_number: false}) %>
           <!-- <hr/> -->
         </div>
         <% } %>
@@ -129,6 +130,11 @@
     }
     #toc-button:hover {
         color: #999;
+    }
+
+    #access-counter {
+        color: #999;
+        font-size: 12px;
     }
 </style>
 
