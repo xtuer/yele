@@ -1,9 +1,19 @@
+# 友言评论
+
+使用了友言的评论功能，<http://qtdebug.com/hexo-uyan/> 介绍了友言账号的注册和得到自己的代码，把其中的 **uid** 配置到根 **_config.yml** 中即可（不是主题的_config.yml），例如
+
+```
+uyan_id: 232323
+```
+
+---
+
 hexo-theme-yilia
 ================
 
 Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
 崇尚简约优雅，以及极致的性能。 你可以点击 [我的博客](http://litten.github.io/) 查看效果。           
- 
+
 如遇到问题或有需求，可以：
 * 提issue给我
 * 在这篇文章下留言[Hexo主题Yilia](http://litten.github.io/2014/08/31/hexo-theme-yilia/)
@@ -22,8 +32,8 @@ Yilia 是为 [hexo](https://github.com/tommy351/hexo) 2.4+制作的主题。
 1. 我喜欢简约。所以近期文章，搜索框都拿掉了    
 2. 接地气一点。所以用上了jiathis分享，友言评论，以及baidu的cdn       
 3. 追求移动端的体验
-3. 让大家把注意力放到内容上。这是本主题设计初衷      
-4. 主题不支持IE6，7，8。以后也不会        
+4. 让大家把注意力放到内容上。这是本主题设计初衷      
+5. 主题不支持IE6，7，8。以后也不会        
 
 ##一、近期更新
 
